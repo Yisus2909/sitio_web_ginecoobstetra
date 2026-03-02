@@ -1,0 +1,1057 @@
+body{    
+    margin: 0;
+    background-color: rgb(255, 221, 245);
+}
+
+.encabezado{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover{
+    color: rgba(101, 165, 248, 0.808);
+}
+
+
+/*Sección de video y reseña*/
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Ocupa toda la altura de la ventana */
+    overflow: hidden;
+  }
+  
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+  }
+
+  .navbar .nav-links {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    height: 280px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.navbar .nav-links.active {
+    transform: translateX(0); /* Desplaza el menú dentro de la vista */
+}
+
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 50px;
+    color: white;
+    width: 48px;
+    height: 50px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+}
+
+.menu-icon:hover {
+    color: rgba(101, 165, 248, 0.808);
+}
+
+.menu-icon.active {
+    color: rgba(255, 0, 0, 0.507);
+}
+
+.contenido-inicio{
+    background-color: aqua;
+    width: 320px;
+    margin-left: 74%;
+    height: 400px;
+    margin-top: 130px;
+}
+
+.logo{
+    width: 250px;
+    height: 85px;
+    margin-left: 38%;
+    margin-top: -110px;
+    position: fixed;
+    border-radius: 10px;
+}
+/*Botones de las redes*/
+.redes{
+    text-align: right;
+    margin-right: 120px;
+}
+
+.redes img{
+    text-align: right;
+    border-radius: 12px;
+    opacity: 0.3 ease;
+    margin-top: -60px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    margin-left: -30px;
+}
+
+.redes img:hover{
+    opacity: 0.5;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.login {
+    text-align: right;
+    border-radius: 12px;
+    opacity: 0.3 ease;
+    margin-top: -6%;
+    margin-right: 35px;
+}
+
+.login img{
+    width: 110px;
+    height: 50px;
+}
+
+.login img:hover{
+    width: 110px;
+    height: 70px;
+    margin-top: -9px;
+    width: 130px;
+    transition: 0.4s;
+    margin-right: -4vh;
+}
+
+/*Sección de servicios*/
+.card-services{    
+    margin-top: 2vh;
+    padding: 25px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.card{
+    background-color: aqua;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 8, 0.4);
+    transition: 0.5s ease;
+    width: 26%;
+    font-size: 18px;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 12px 5px #b85fa5;
+    transition: 0.5s ease;
+}
+
+.card img{
+    background-color: brown;
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 90px 20px 90px;
+    box-shadow: 0px 4px 16px 1px #ffffff;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.card img:hover{
+    background-color: brown;
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 90px 20px 90px;
+    box-shadow: 0px 4px 12px 1px #8f196b;
+    transition: 0.4s ease;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.p-services{
+    margin-top: -12px;
+}
+
+.contenido-inicio-services{
+    width: 35%;
+    margin-left: 58%;
+    height: 47%;
+    margin-top: 35vh;
+    text-align: right;
+    padding: 20px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f8d5eff3;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.boton-services{
+    width: 100%;
+    height: 5vh;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #f0bae4;
+    transition: 0.3s ease;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.boton-services:hover{
+    background-color: #f0bae4a2;
+    box-shadow: 0px 4px 12px 1px #df78c8;
+}
+
+.container-why-because{
+    margin-top: 2vh;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.why{
+    width: 60vh;
+    font-size: 40px;
+    margin-top: 20vh;
+    margin-left: 5vh;
+}
+
+.because{
+    height: 300px;
+    width: 80%;
+    font-size: 40px;
+    margin-left: 5vh;
+    color: #dd28b6;
+}
+
+footer{
+    background-image: url(../imagenes/footer.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    height: 200px;    
+}
+
+footer p{
+    font-size: 20px;
+}
+
+.redes-footer{
+    text-align: center;
+}
+
+.redes-footer img{
+    text-align: center;
+    border-radius: 12px;
+    opacity: 0.3 ease;
+    margin-top: 10vh;
+    transition: 0.3s;
+}
+
+.redes-footer img:hover{
+    opacity: 0.5;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+/*Seccion de Sobre nosotros*/
+
+.img-luijo img{
+    width: 100%;
+}
+
+.container-luijo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 15vh;
+    padding: 20px;
+}
+
+.contenido-inicio-us{
+    width: 48%;
+    margin-left: 2%;
+    height: 22%;
+    margin-top: -280px;
+    padding: 20px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    position: absolute;
+}
+
+.contenido-inicio-us p{
+    margin-top: 0px;
+    font-family: 'Rouge Script';
+    font-size: 55px;
+    padding: 20px;
+}
+
+.name{
+    font-family: 'Rouge Script';
+    font-size: 45px;
+    transition: all 0.9s ease;
+}
+
+.name:hover{
+    font-family: 'Rouge Script';
+    font-size: 52px;
+    transition: all 0.9s ease;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+    border-radius: 80px;
+}
+
+.p-us{
+    font-size: 20px;
+}
+
+.card-us{
+    width: 30%;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+
+}
+
+.card-us:hover{
+    transition: 0.4s ease;
+}
+
+.card-us img{
+    width: 100%;
+    border-radius: 1000px;
+    transition: all 0.9s ease;
+    box-shadow: 0 4px 16px rgb(0, 0, 0);
+}
+
+.card-us img:hover{
+    border-radius: 50px;
+    transition: all 0.9s ease;
+    box-shadow: 0 4px 16px rgb(255, 255, 255);
+}
+
+h3:hover{
+    text-decoration: underline;
+    transition: all 0.9s ease;
+}
+
+.video-inicio {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Ocupa toda la altura de la ventana */
+    overflow: hidden;
+  }
+  
+  .video-us {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 18px 28px 5px rgb(255, 255, 255);
+  }
+
+
+/*Seccion de blogs*/
+.carousel-container {
+    display: flex; /* Alinea los carruseles horizontalmente */
+    gap: 40px; /* Espaciado entre los carruseles */
+    justify-content: center; /* Centra los carruseles en la pantalla */
+    align-items: center; /* Alinea los carruseles verticalmente */
+    padding: 50px;
+    margin-top: 120px;
+  }
+  
+  .carousel {
+    width: 100%; /* Ancho de cada carrusel */
+    height: 450px; /* Alto de cada carrusel */
+    overflow: hidden; /* Oculta imágenes fuera del área visible */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.5s ease;
+    opacity: 0.3;
+  }
+  
+  .carousel-images {
+    display: flex;
+    width: calc(100% * 3); /* Ancho total del conjunto de imágenes (3 imágenes de 400px cada una) */
+    animation: slide 25s infinite; /* Animación continua para pasar por las imágenes */
+    cursor: pointer;
+  }
+
+  .carousel:hover {
+    transform: translateY(-20px);
+    transition: 0.5s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    opacity: 1;
+  }
+  
+  .carousel-images img {
+    width: 450px; /* Cada imagen ocupa el ancho del carrusel */
+    height: 450px; /* Altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+  }
+
+  /* Animación de deslizamiento */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-450px); /* Mueve a la 2ª imagen */
+    }
+    50% {
+      transform: translateX(-900px); /* Mueve a la 3ª imagen */
+    }
+    75% {
+      transform: translateX(-450px); /* Vuelve a la 2ª imagen */
+    }
+    100% {
+        transform: translateX(0); /* Vuelve a la 1ª imagen */
+      }
+  }
+
+.container-galeria{
+    width: 40%;
+    height: 100px;
+    font-family: 'Rouge Script';
+    margin-left: 30vh;
+}
+
+.container-galeria p{
+    font-size: 75px;
+}
+
+.container-born{
+    display: flex;
+    padding: 20px;
+    height: 700px;
+}
+
+.video-born {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Ocupa toda la altura de la ventana */
+    overflow: hidden;
+  }
+  
+  .video-galery {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 80%;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 40%;
+    cursor: pointer;
+    box-shadow: 0px 18px 28px 5px rgb(255, 255, 255);
+    opacity: 0.4;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .video-galery:hover{
+    opacity: 1;
+    width: 80%;
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    border-radius: 40px;
+  }
+
+  .milagro-vida{
+    background-color: rgba(139, 29, 106, 0.2);
+    border-radius: 20px 150px 20px 150px;
+    padding: 25px;
+    height: 50vh;
+    margin-top: 70px;
+
+  }
+
+  .milagro-vida p{
+    font-family: 'Rouge Script';
+    font-size: 65px;
+    color: rgb(87, 9, 63);
+  }
+
+/*Sección de contactenos*/
+
+.body-contactenos{
+    background-image: url(../imagenes/clinica2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.mapa-form{
+    height: 1000px;
+    display: flex;
+    margin-top: 50px;
+  }
+  
+  .container {
+    background-color: rgba(49, 45, 45, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 45%;
+      float: right;
+      margin: 10vh 10vh;
+  }
+
+  .container p{
+    font-family: 'Rouge Script';
+    font-size: 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  .mapa{
+    padding: 30px;
+    width: 45%;
+    margin-left: 5vh;
+  }
+
+  .mapa p{
+    font-size: 28px;
+    background-color: rgba(49, 45, 45, 0.9);
+    padding: 20px;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .mapa iframe{
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgb(25, 28, 26);
+    transition: 0.4s ease;
+    width: 80%;
+    height: 300px;
+    transition: 0.9s ease;
+    opacity: 0.5;
+    border-radius: 10px;
+  }
+  
+  .mapa iframe:hover{
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgb(255, 255, 255);
+    transition: 0.4s ease;
+    width: 100%;
+    height: 560px;
+    transition: 0.9s ease;
+    opacity: 1;
+    border-radius: 40px;
+  }
+  
+  
+  h1 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  
+  .form-group {
+      margin-bottom: 15px;
+      margin-right: 22px;
+  }
+  
+  label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+  }
+  
+  .campos {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-right: none;
+      border-radius: 5px;
+      transition: 0.4s ease;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+  }
+
+input[type="date"] {
+    color: white; /* Cambia el color del texto del campo */
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid white; /* Borde blanco */
+    border-top: none;
+    border-right: none;
+}
+
+
+  
+  input:hover{
+    box-shadow: 0 2px 4px rgb(159, 102, 150);
+    transition: 0.4s ease;
+  }
+  
+  .checkbox{
+    height: 15px;
+  }
+
+  #roomType {
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  
+  #roomType:hover{
+    background-color: #fdb0f0d0;
+    transition: 0.4s ease;
+  }
+  
+  input:focus {
+      border-color: #cd4db8d0;
+      outline: none;
+      box-shadow: 0 2px 4px rgb(102, 159, 125);
+  }
+  
+  .error-message {
+      color: #ff4d4f;
+      font-size: 12px;
+      margin-top: 5px;
+      display: none; /* Oculto por defecto */
+  }
+  
+  .boton {
+      background-color: #fcb3fcd0;
+      color: black;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.5s ease;
+  }
+  
+  .boton:hover {
+    background-color: #860d86d0;
+    transition: 0.5s ease;
+    color: white;
+  }
+  
+  .whatsapp img{
+    position:fixed;
+    width:70px;
+    height:70px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+    transition: 0.5s ease;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  
+  .whatsapp img:hover{
+    width:85px;
+    height:85px;
+    transition: 0.5s ease;
+    box-shadow: 0px 4px 16px rgb(8, 8, 8);
+    opacity: 1;
+  
+  }
+  
+
+/*Pantallas pequeñas (móviles)*/
+@media (max-width: 600px) {
+
+.redes{
+  display: none;
+}
+
+.logo{
+  margin-left: 85px;
+  margin-top: -70px;
+}
+
+.login{
+  margin-top: -45px;
+}
+
+
+.contenido-inicio-us{
+  height: 100px;
+  margin-top: -150px;
+  width: 300px;
+}
+
+.contenido-inicio-us p{
+  font-size: 35px;
+  margin-top: -20px;
+}
+
+.video-us{
+  width: 400px;
+}
+
+.container-luijo{
+  flex-wrap: wrap;
+}
+.card-us{
+  width: 300px;
+  margin-left: -20px;
+}
+
+.contenido-inicio-services{
+  margin-left: 20px;
+  width: 400px;
+  height: 200px;
+  margin-top: 350px;
+}
+
+.contenido-inicio-services p{
+  font-size: 30px;
+}
+
+.card-services{
+  flex-wrap: wrap;
+  width: 450px;
+  margin-left: 400;
+  padding: 1px;
+}
+.card{
+  width: 400px;
+  margin-left: 20px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+h3{
+  font-size: 17px;
+}
+
+.boton-services{
+  font-size: 15px
+}
+
+.container-why-because{
+  flex-wrap: wrap;
+}
+
+.why{
+  margin-top: 20px;
+}
+
+.because{
+  font-size: 30px;
+  margin-left: 40px;
+}
+
+.container-galeria{
+  width: 80%;
+  margin-left: 40px;
+}
+
+.container-galeria p{
+  font-size: 55px;
+}
+
+.carousel-container{
+  flex-wrap: wrap;
+}
+.container-born{
+  flex-wrap: wrap;
+  height: 900px
+}
+
+
+.milagro-vida p{
+  font-size: 40px;
+}
+
+.carousel-container {
+  display: flex; /* Alinea los carruseles horizontalmente */
+  gap: 40px; /* Espaciado entre los carruseles */
+  justify-content: center; /* Centra los carruseles en la pantalla */
+  align-items: center; /* Alinea los carruseles verticalmente */
+  padding: 50px;
+  margin-top: 120px;
+}
+
+.carousel {
+  width: 400px; /* Ancho de cada carrusel */
+  height: 450px; /* Alto de cada carrusel */
+  overflow: hidden; /* Oculta imágenes fuera del área visible */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.carousel-images {
+  display: flex;
+  width: calc(100% * 3); /* Ancho total del conjunto de imágenes (3 imágenes de 400px cada una) */
+  animation: slide 25s infinite; /* Animación continua para pasar por las imágenes */
+  cursor: pointer;
+}
+
+.carousel:hover {
+  transform: translateY(-20px);
+  transition: 0.5s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-images img {
+  width: 400px; /* Cada imagen ocupa el ancho del carrusel */
+  height: 450px; /* Altura de la imagen */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  box-shadow: 0 2px 4px rgb(0, 0, 0);
+}
+
+/* Animación de deslizamiento */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-400px); /* Mueve a la 2ª imagen */
+  }
+  50% {
+    transform: translateX(-800px); /* Mueve a la 3ª imagen */
+  }
+  75% {
+    transform: translateX(-400px); /* Vuelve a la 2ª imagen */
+  }
+  100% {
+      transform: translateX(0); /* Vuelve a la 1ª imagen */
+    }
+}
+
+.mapa-form{
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.mapa{
+  width: 80%;
+}
+
+.mapa iframe{
+  width: 80%;
+}
+.container{
+  width: 100%;
+}
+
+}
+
+/*Pantallas medianas (tablets)*/
+@media (min-width: 601px) and (max-width: 1024px){
+  .logo{
+    margin-left: 85px;
+    margin-top: -110px;
+  }
+
+  .login{
+    margin-top: -85px;
+  }
+
+  .contenido-inicio-us{
+    height: 220px;
+  }
+
+  .video-us{
+    width: 500px;
+  }
+  
+  .because{
+    font-size: 30px;
+    margin-left: 40px;
+  }
+
+  .contenido-inicio-services p{
+    font-size: 36px;
+  }
+
+  .carousel-container{
+    flex-wrap: wrap;
+  }
+  .container-born{
+    flex-wrap: wrap;
+    height: 900px
+  }  
+  
+  .milagro-vida p{
+    font-size: 60px;
+  }
+
+  .container-galeria p{
+    font-size: 65px;
+  }
+
+  .carousel-container {
+    display: flex; /* Alinea los carruseles horizontalmente */
+    gap: 40px; /* Espaciado entre los carruseles */
+    justify-content: center; /* Centra los carruseles en la pantalla */
+    align-items: center; /* Alinea los carruseles verticalmente */
+    padding: 50px;
+    margin-top: 120px;
+  }
+  
+  .carousel {
+    width: 800px; /* Ancho de cada carrusel */
+    height: 450px; /* Alto de cada carrusel */
+    overflow: hidden; /* Oculta imágenes fuera del área visible */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.5s ease;
+    opacity: 0.3;
+  }
+  
+  .carousel-images {
+    display: flex;
+    width: calc(100% * 3); /* Ancho total del conjunto de imágenes (3 imágenes de 400px cada una) */
+    animation: slide 25s infinite; /* Animación continua para pasar por las imágenes */
+    cursor: pointer;
+  }
+
+  .carousel:hover {
+    transform: translateY(-20px);
+    transition: 0.5s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    opacity: 1;
+  }
+  
+  .carousel-images img {
+    width: 800px; /* Cada imagen ocupa el ancho del carrusel */
+    height: 450px; /* Altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+  }
+
+  /* Animación de deslizamiento */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-800px); /* Mueve a la 2ª imagen */
+    }
+    50% {
+      transform: translateX(-1600px); /* Mueve a la 3ª imagen */
+    }
+    75% {
+      transform: translateX(-800px); /* Vuelve a la 2ª imagen */
+    }
+    100% {
+        transform: translateX(0); /* Vuelve a la 1ª imagen */
+      }
+  }
+}
+
+header {
+  position: fixed; /* Fija todo el header en la parte superior */
+  top: 0;
+  width: 100%;
+  background-color: #333; /* Fondo oscuro o ajusta según tu diseño */
+  color: white;
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+  z-index: 100; /* Asegura que el header esté encima del contenido */
+}
+
+header.hidden {
+  transform: translateY(-100%); /* Oculta el header hacia arriba */
+}
+
+
+.whatsapp img{
+  position:fixed;
+  width:70px;
+  height:70px;
+  bottom:40px;
+  right:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  z-index:100;
+  transition: 0.5s ease;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.whatsapp img:hover{
+  width:85px;
+  height:85px;
+  transition: 0.5s ease;
+  box-shadow: 0px 4px 16px rgb(8, 8, 8);
+  opacity: 1;
+
+}

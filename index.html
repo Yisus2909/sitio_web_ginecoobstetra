@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/style-inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+    <title>Ginecología y Obstetricia</title>
+</head>
+<body>
+    <header class="encabezado">        
+        <nav class="navbar" id="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="redes">
+                <a href="https://twitter.com" target="_blank"><img src="imagenes/twitter-2170426_640.png" alt="twitter" height="50px" width="50px"></a>
+                <a href="https://instagram.com" target="_blank"><img src="imagenes/instagram-1581266_640.jpg" alt="instagram" height="50px" width="50px"></a>
+                <a href="https://facebook.com" target="_blank"><img src="imagenes/facebook-2429746_640.png" alt="facebook" height="50px" width="50px"></a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contactenos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <a href="index.html"><img src="imagenes/logo.png" alt="" class="logo"></a>
+        <div class="login" >
+            <a href="login.html" target="_blank"><img src="imagenes\login.png" alt="login"></a>
+        </div>
+    </header>
+
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+          <source src="videos/consulta.mp4" type="video/mp4">
+        </video>
+        
+    </div>
+    <div class="container-index">
+        <div>
+            <p class="p-index">Nuestras instalaciones cuentan con:</p>
+        </div>
+        <div class="services" id="servicios">        
+            <div class="service">
+              <img src="imagenes\wifi.png" alt="Wi-Fi gratis" />
+              <p>Wi-Fi gratis</p>
+            </div>
+            <div class="service">
+              <img src="imagenes\parqueadero.png" alt="Estacionamiento" />
+              <p>Estacionamiento</p>
+            </div>
+            <div class="service">
+              <img src="imagenes\gym.png" alt="Gimnasio" />
+              <p>Gimnasio</p>
+            </div>
+            <div class="service">
+              <img src="imagenes\aire.png" alt="Aire acondicionado" />
+              <p>Aire acondicionado</p>
+            </div>
+            <div class="service">
+              <img src="imagenes\accesibilidad.png" alt="Accesibilidad" />
+              <p>Accesibilidad</p>
+            </div>
+            <div class="service">
+              <img src="imagenes\niñeras.png" alt="Niñera" />
+              <p>Niñera</p>
+            </div>
+            <div class="service">
+              <img src="imagenes\celebracion.png" alt="Celebraciones" />
+              <p>Celebraciones</p>
+            </div>
+            <div class="service">
+              <img src="imagenes\spa.png" alt="Spa" />
+              <p>Spa</p>
+            </div>
+            <div class="service">
+              <img src="imagenes\videojuego.png" alt="Zona de videojuegos" />
+              <p>Zona de video juegos</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-play">
+            <div class="carousel-container-juegos" id="galeria">
+                <div class="carousel-juegos">
+                    <div class="carousel-images-juegos">
+                        <img src="imagenes\juegos.jpg" alt="">
+                        <img src="imagenes\juegos3.jpg" alt="">
+                        <img src="imagenes\juegos2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        <div>
+            <p class="p-juegos">¿A tu esposo le aburren las consultas? <br><br> <strong>Te tengo la solución.!!!</strong> <br>--> 🏓🎱🎮</p>
+        </div>
+    </div>
+<br>
+<div id="popup" class="popup">
+  <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2>¡Oferta Especial!</h2>
+      <p>Consulta gratuita al agendar antes del <strong>30 de noviembre</strong>. Aprovecha ya.</p>
+      <button  class="close-btn" onclick="closePopup()">X</button>
+  </div>
+</div>
+<a class="whatsapp" href="https://whatsapp.com" target="_blank"><img src="imagenes\whatsapp.png" alt="facebook"></a>
+    <script src="scripts/script.js" defer></script>
+</body>
+<footer>
+    <div class="redes-footer">
+        <a href="https://twitter.com" target="_blank"><img src="imagenes/twitter-2170426_640.png" alt="twitter" height="40px" width="40px"></a>
+        <a href="https://instagram.com" target="_blank"><img src="imagenes/instagram-1581266_640.jpg" alt="instagram" height="40px" width="40px"></a>
+        <a href="https://facebook.com" target="_blank"><img src="imagenes/facebook-2429746_640.png" alt="facebook" height="40px" width="40px"></a>
+    </div>
+    <p>© 2024 | Developed by Jesús Sánchez | Todos los derechos reservados</p>
+</footer>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+    <title>Ginecología y Obstetricia</title>
+</head>
+<body class="body-contactenos">
+    <header class="encabezado">        
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="redes">
+                <a href="https://twitter.com" target="_blank"><img src="imagenes/twitter-2170426_640.png" alt="twitter" height="50px" width="50px"></a>
+                <a href="https://instagram.com" target="_blank"><img src="imagenes/instagram-1581266_640.jpg" alt="instagram" height="50px" width="50px"></a>
+                <a href="https://facebook.com" target="_blank"><img src="imagenes/facebook-2429746_640.png" alt="facebook" height="50px" width="50px"></a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <a href="index.html"><img src="imagenes/logo.png" alt="" class="logo"></a>
+        <div class="login" >
+            <a href="login.html" target="_blank"><img src="imagenes\login.png" alt="login"></a>
+        </div>
+    </header>
+
+    <div class="mapa-form">
+        <div class="mapa">
+          <div>
+            <p><em><strong>¡Nos encontramos en este lugar tan hermoso! <br><br> No dudes en acercarte a disfrutar de todos nuestros servicios.</strong></em></p>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.0859173821955!2d-67.59940864101976!3d10.254654366080064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e803b61e7034809%3A0x9a5dc6d81812a192!2sCentro%20Profesional%20Plaza!5e0!3m2!1ses-419!2sco!4v1732901384070!5m2!1ses-419!2sco" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="container" id="contactenos">
+          <form id="reservation-form">
+            <p><strong><u>Agenda tu cita...!</u></strong></p>
+              <!-- Campo Nombre -->
+              <div class="form-group">
+                  <label for="name">Nombre completo:</label>
+                  <input class="campos" type="text" id="name" name="name" placeholder="Ingrese su nombre completo" required>
+                  <small class="error-message"></small>
+              </div>
+          
+              <!-- Campo Correo Electrónico -->
+              <div class="form-group">
+                  <label for="email">Correo Electrónico:</label>
+                  <input class="campos" type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+                  <small class="error-message"></small>
+              </div>
+          
+              <!-- Campo Número de Teléfono -->
+              <div class="form-group">
+                  <label for="phone">Número de Teléfono:</label>
+                  <input class="campos" type="tel" id="phone" name="phone" placeholder="Ingrese su número de teléfono" required>
+                  <small class="error-message"></small>
+              </div>
+
+              <!-- Campo Fecha de nacimiento -->
+              <div class="form-group">
+                <label for="bornDate">Fecha de Nacimiento:</label>
+                <input class="campos" type="date" id="bornDate" name="bornDate" placeholder="Ingrese su fecha de nacimiento" required>
+                <small class="error-message"></small>
+            </div>
+          
+              <!-- Campo Fecha de la consulta -->
+              <div class="form-group">
+                  <label for="arrivalDate">Fecha de la consulta:</label>
+                  <input class="campos" type="date" id="arrivalDate" name="arrivalDate" required>
+                  <small class="error-message"></small>
+              </div>
+          
+              <!-- Campo Tipo de Habitación -->
+              <div class="form-group">
+                  <label for="roomType">Tipo de Consulta:</label>
+                  <select id="roomType" name="roomType" required>
+                      <option value="">Selecciona</option>
+                      <option value="single">Ginecología</option>
+                      <option value="double">Control prenatal</option>
+                      <option value="suite">Diagnóstico y tratamiento de infertilidad</option>
+                      <option value="suite">Evaluación ginecológica anual</option>
+                      <option value="suite">Manejo de menopausia</option>
+                  </select>
+                  <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="roomType">Dr. de preferencia:</label>
+                <select id="roomType" name="roomType" required>
+                    <option value="">Selecciona</option>
+                    <option value="single">Dr. Luis Jesús Navas</option>
+                    <option value="double">Dra. Johana Andreina Chacín</option>
+                </select>
+                <small class="error-message"></small>
+            </div>
+          
+              <!-- Checkbox Aceptar Términos y Condiciones -->
+              <div class="form-group">
+                  <label>
+                      <input class="checkbox" type="checkbox" id="terms" name="terms" required>
+                      Acepto los términos y condiciones
+                  </label>
+                  <small class="error-message"></small>
+              </div>
+          
+              <!-- Botón Enviar -->
+              <button class="boton" type="submit">Enviar Reserva</button>
+              
+          </form>
+          
+          <div id="confirmation-message" style="display: none; color: green; font-size: 1.2em; margin-top: 20px;">
+              
+          </div>
+        </div>
+      </div>
+      <a class="whatsapp" href="https://whatsapp.com" target="_blank"><img src="imagenes\whatsapp.png" alt="facebook"></a>
+      <script src="scripts/script.js" defer></script>
+</body>
+<footer>
+    <div class="redes-footer">
+        <a href="https://twitter.com" target="_blank"><img src="imagenes/twitter-2170426_640.png" alt="twitter" height="40px" width="40px"></a>
+        <a href="https://instagram.com" target="_blank"><img src="imagenes/instagram-1581266_640.jpg" alt="instagram" height="40px" width="40px"></a>
+        <a href="https://facebook.com" target="_blank"><img src="imagenes/facebook-2429746_640.png" alt="facebook" height="40px" width="40px"></a>
+    </div>
+    <p>© 2024 | Developed by Jesús Sánchez | Todos los derechos reservados</p>
+</footer>
+</html>
+
+
