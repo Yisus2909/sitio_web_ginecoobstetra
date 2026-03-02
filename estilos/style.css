@@ -736,7 +736,7 @@ input[type="date"] {
 
   /* Centrado perfecto del logo sin romper el diseño */
   .logo {
-    margin-left: 50%;
+    margin-left: 45%;
     transform: translateX(-50%);
     margin-top: -75px;
     width: 180px; 

@@ -90,3 +90,27 @@ body, html {
     transition: 0.5s;
     color: #ffffff;
   }
+
+/* === PANTALLAS PEQUEÑAS (MÓVILES) === */
+@media (max-width: 600px) {
+  .login-box {
+    width: 85%; /* Cambiamos los 300px fijos por un porcentaje adaptable */
+    max-width: 320px; /* Un límite para que no se vea deforme */
+    padding: 25px 20px;
+    box-sizing: border-box; /* Nuestro truco para que el padding no desborde la caja */
+  }
+
+  .input-field {
+    width: 100%; /* Para que el input ocupe el ancho exacto de la caja */
+    box-sizing: border-box;
+  }
+
+  .logo-login {
+    margin-bottom: 30px; /* Le damos un poquito más de aire abajo */
+  }
+
+  .logo-login img {
+    width: 180px; /* Achicamos un poco el logo para el celular */
+    height: auto;
+  }
+}
