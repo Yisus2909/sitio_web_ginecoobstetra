@@ -160,23 +160,26 @@ body{
     margin-right: -4vh;
 }
 
-/*Sección de servicios*/
-.card-services{    
-    margin-top: 2vh;
+/* Contenedor principal de las tarjetas */
+.card-services {    
+    margin-top: 50px;
     padding: 25px;
     display: flex;
+    flex-wrap: wrap; /* Esto es clave: permite que las tarjetas bajen si no caben */
     gap: 40px;
     justify-content: center;
 }
 
-.card{
-    background-color: aqua;
-    padding: 25px;
+/* Diseño de cada tarjeta individual */
+.card {
     background-color: rgba(0, 0, 0, 0.2);
+    padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 8, 0.4);
     transition: 0.5s ease;
-    width: 26%;
+    /* En lugar de width: 26%, usamos flex-basis y un ancho mínimo */
+    flex: 1 1 300px; /* Crece, se encoge, pero nunca es menor a 300px */
+    max-width: 350px; /* Evita que se estiren demasiado en pantallas gigantes */
     font-size: 18px;
 }
 
@@ -727,187 +730,311 @@ input[type="date"] {
 
 /*Pantallas pequeñas (móviles)*/
 @media (max-width: 600px) {
-
-.redes{
-  display: none;
-}
-
-.logo{
-  margin-left: 85px;
-  margin-top: -70px;
-}
-
-.login{
-  margin-top: -45px;
-}
-
-
-.contenido-inicio-us{
-  height: 100px;
-  margin-top: -150px;
-  width: 300px;
-}
-
-.contenido-inicio-us p{
-  font-size: 35px;
-  margin-top: -20px;
-}
-
-.video-us{
-  width: 400px;
-}
-
-.container-luijo{
-  flex-wrap: wrap;
-}
-.card-us{
-  width: 300px;
-  margin-left: -20px;
-}
-
-.contenido-inicio-services{
-  margin-left: 20px;
-  width: 400px;
-  height: 200px;
-  margin-top: 350px;
-}
-
-.contenido-inicio-services p{
-  font-size: 30px;
-}
-
-.card-services{
-  flex-wrap: wrap;
-  width: 450px;
-  margin-left: 400;
-  padding: 1px;
-}
-.card{
-  width: 400px;
-  margin-left: 20px;
-}
-
-h2{
-  font-size: 20px;
-}
-
-h3{
-  font-size: 17px;
-}
-
-.boton-services{
-  font-size: 15px
-}
-
-.container-why-because{
-  flex-wrap: wrap;
-}
-
-.why{
-  margin-top: 20px;
-}
-
-.because{
-  font-size: 30px;
-  margin-left: 40px;
-}
-
-.container-galeria{
-  width: 80%;
-  margin-left: 40px;
-}
-
-.container-galeria p{
-  font-size: 55px;
-}
-
-.carousel-container{
-  flex-wrap: wrap;
-}
-.container-born{
-  flex-wrap: wrap;
-  height: 900px
-}
-
-
-.milagro-vida p{
-  font-size: 40px;
-}
-
-.carousel-container {
-  display: flex; /* Alinea los carruseles horizontalmente */
-  gap: 40px; /* Espaciado entre los carruseles */
-  justify-content: center; /* Centra los carruseles en la pantalla */
-  align-items: center; /* Alinea los carruseles verticalmente */
-  padding: 50px;
-  margin-top: 120px;
-}
-
-.carousel {
-  width: 400px; /* Ancho de cada carrusel */
-  height: 450px; /* Alto de cada carrusel */
-  overflow: hidden; /* Oculta imágenes fuera del área visible */
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  position: relative;
-  transition: 0.5s ease;
-}
-
-.carousel-images {
-  display: flex;
-  width: calc(100% * 3); /* Ancho total del conjunto de imágenes (3 imágenes de 400px cada una) */
-  animation: slide 25s infinite; /* Animación continua para pasar por las imágenes */
-  cursor: pointer;
-}
-
-.carousel:hover {
-  transform: translateY(-20px);
-  transition: 0.5s ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
-}
-
-.carousel-images img {
-  width: 400px; /* Cada imagen ocupa el ancho del carrusel */
-  height: 450px; /* Altura de la imagen */
-  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
-  box-shadow: 0 2px 4px rgb(0, 0, 0);
-}
-
-/* Animación de deslizamiento */
-@keyframes slide {
-  0% {
-    transform: translateX(0);
+  .redes {
+    display: none;
   }
-  25% {
-    transform: translateX(-400px); /* Mueve a la 2ª imagen */
+
+  /* Centrado perfecto del logo sin romper el diseño */
+  .logo {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -75px;
+    width: 180px; 
+    height: auto;
   }
-  50% {
-    transform: translateX(-800px); /* Mueve a la 3ª imagen */
+
+  .login {
+    margin-top: -55px;
+    margin-right: 15px;
   }
-  75% {
-    transform: translateX(-400px); /* Vuelve a la 2ª imagen */
+
+  .login img {
+    width: 80px;
+    height: auto;
   }
-  100% {
-      transform: translateX(0); /* Vuelve a la 1ª imagen */
-    }
-}
+  
+  .navbar .nav-links {
+    width: 200px; /* Evita que el menú ocupe toda la pantalla */
+  }
+  /* Se modifican las tarjetas de los doctores para que fluyan igual de bien */
+  .container-luijo {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    gap: 30px;
+  }
 
-.mapa-form{
-  flex-wrap: wrap;
-  height: 100%;
-}
+  .card-us {
+    width: 90%;
+    max-width: 340px; /* Mantiene el mismo tamaño que la tarjeta de servicios */
+    margin: 0 auto; /* Centrado perfecto */
+    padding: 25px; /* En PC tenías 40px, en celular eso es muchísimo */
+    height: auto; 
+    box-sizing: border-box; /* Evita el desborde a la derecha */
+  }
 
-.mapa{
-  width: 80%;
-}
+  .contenido-inicio-us {
+    width: 90%;
+    height: auto;
+    margin-top: 20px; /* Quitamos el margen negativo gigante */
+    position: relative; /* Para que no flote encima de la foto */
+    margin-left: 5%;
+  }
 
-.mapa iframe{
-  width: 80%;
-}
-.container{
-  width: 100%;
-}
+  .contenido-inicio-us p {
+    font-size: 35px;
+    margin-top: 0;
+  }
 
+  .video-us {
+    width: 90%; /* El video también al 90% de la pantalla */
+  }
+  /* Se modifican las tarjetas de servicios para que se apilen y usen el 90% del ancho */
+  .card-services {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0; /* Quitamos márgenes residuales */
+    padding: 20px 0; /* Quitamos el padding lateral del contenedor */
+    gap: 30px; 
+  }
+
+  .card {
+    width: 90%; 
+    max-width: 340px; /* Evita que la tarjeta se vea demasiado ancha/gigante */
+    margin: 0 auto; /* Esto garantiza el centrado perfecto */
+    padding: 20px; /* Reducimos un poco el relleno interno para móviles */
+    box-sizing: border-box; /* ¡La clave para que no se desborde a la derecha! */
+  }
+
+  /* === SECCIÓN DE CONTÁCTENOS (MAPA Y FORMULARIO) === */
+  .mapa-form {
+    flex-direction: column; /* Apilamos el mapa arriba y el formulario abajo */
+    align-items: center;
+    height: auto; /* Dejamos que el contenido dicte la altura */
+    margin-top: 20px;
+  }
+
+  .mapa {
+    width: 90%;
+    margin: 0 auto 30px auto; /* Centrado perfecto y espacio debajo */
+    padding: 0;
+  }
+
+  .mapa iframe {
+    width: 100%; /* El mapa toma el 100% de su contenedor */
+    height: 300px;
+    opacity: 1; /* <-- ¡Anulamos el efecto opaco de la PC! */
+  }
+
+  .container {
+    width: 90%;
+    max-width: 340px; /* Mismo tamaño que las tarjetas */
+    margin: 0 auto; /* Anulamos el margin gigante de 10vh de la PC */
+    float: none; /* Anulamos el float: right de la PC */
+    box-sizing: border-box;
+  }
+
+
+  /* === SECCIÓN DE BLOGS (CARRUSELES Y VIDEOS) === */
+  .container-galeria {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .container-galeria p {
+    font-size: 40px; /* Achicamos la letra gigante */
+  }
+
+  .carousel-container {
+    flex-direction: column; /* Ponemos un carrusel debajo del otro */
+    padding: 20px 0;
+    gap: 30px;
+    margin-top: -2%;
+  }
+
+  .carousel {
+    width: 300px; /* Usamos los 300px seguros que nos funcionaron en el inicio */
+    height: 300px;
+    margin: 0 auto;
+    opacity: 1; /* <-- ¡Anulamos el efecto opaco de la PC! */
+  }
+
+  .carousel-images img {
+    width: 300px;
+    height: 300px;
+    opacity: 1; /* <-- ¡Anulamos el efecto opaco de la PC! */
+  }
+
+  /* Animación ajustada al nuevo tamaño de 300px */
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-300px); }
+    50% { transform: translateX(-600px); }
+    75% { transform: translateX(-300px); }
+    100% { transform: translateX(0); }
+  }
+
+  .container-born {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .video-born {
+    width: 90%;
+    height: 300px; /* Altura controlada para el video en móvil */
+    margin: 0 auto;
+    opacity: 1; /* <-- ¡Anulamos el efecto opaco de la PC! */
+  }
+
+  .video-galery {
+    width: 100%;
+    height: 100%;
+    position: static; /* Quitamos el centrado forzado de PC */
+    transform: none;
+    border-radius: 20px;
+    opacity: 1; /* <-- ¡Anulamos el efecto opaco de la PC! */
+  }
+
+  .milagro-vida {
+    width: 90%;
+    margin: 20px auto;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .milagro-vida p {
+    font-size: 35px;
+    margin-left: 10%;
+  }
+  /* === AJUSTE DEL TEXTO EN EL VIDEO DE SERVICIOS === */
+  .contenido-inicio-services {
+    width: 90%;
+    margin: 330px auto 0 auto; /* Lo centramos horizontalmente */
+    padding: 20px;
+    text-align: center; /* Obligamos a que el texto se centre en el celular */
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .contenido-inicio-services p {
+    font-size: 22px; /* Reducimos el tamaño para que no se desborde */
+    line-height: 1.4; /* Le damos un poco de respiro entre las líneas */
+  }
+
+  /* === SECCIÓN ¿POR QUÉ ELEGIRNOS? === */
+  .container-why-because {
+    flex-direction: column; /* Apila la pregunta arriba y la respuesta abajo */
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+  }
+
+  .why {
+    width: 100%; /* Anulamos los 60vh que rompían el ancho */
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .because {
+    width: 100%; /* Anulamos el 80% y los márgenes de la PC */
+    height: auto;
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 40px; /* Le damos espacio para que no pegue con el footer */
+  }
+
+  /* === SECCIÓN SOBRE NOSOTROS (AJUSTES) === */
+  .img-luijo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contenido-inicio-us {
+    position: relative; /* Quitamos el absolute para que no flote y rompa el margen */
+    width: 90%;
+    height: auto; /* Dejamos que el texto decida la altura de la caja */
+    margin: 30px auto; /* Lo subimos un poco para que pise la foto, pero bien centrado */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .contenido-inicio-us p {
+    font-size: 32px; /* Letra más adaptable para celular */
+    margin: 0;
+    padding: 0;
+    height: 50%;
+  }
+
+  .container-luijo {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    margin-top: -10%;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .card-us {
+    width: 90%;
+    max-width: 340px;
+    height: auto; /* Fundamental para que la tarjeta crezca hacia abajo si hay mucho texto */
+    margin: 0 auto;
+    padding: 30px 20px; /* Le damos respiro interno (arriba/abajo y lados) */
+    box-sizing: border-box;
+  }
+
+  .card-us img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* Evita que la foto se deforme en un óvalo extraño al achicarse */
+  }
+
+  .name {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .p-us {
+    font-size: 16px; /* Achicamos el texto de la descripción */
+    line-height: 1.5; /* Agregamos espacio entre líneas para que respire y sea fácil de leer */
+    text-align: justify;
+  }
+
+  .card-us h3 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* === VIDEO DEL FINAL DE SOBRE NOSOTROS === */
+  .video-inicio {
+    height: auto; /* Quitamos la altura fija gigante de PC */
+    padding: 20px 0;
+    margin-bottom: 30px;
+  }
+
+  .video-us {
+    position: static; /* Le quitamos el absolute que lo forzaba al centro en la PC */
+    width: 90%;
+    height: auto;
+    transform: none; /* Quitamos la traslación de PC */
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+  }
 }
 
 /*Pantallas medianas (tablets)*/

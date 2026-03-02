@@ -113,75 +113,65 @@
       }
   }
 
-  /*Pantallas pequeñas (móviles)*/
+/*Pantallas pequeñas (móviles)*/
 @media (max-width: 600px) {
-  .container-index{
-    flex-wrap: wrap;
-    margin-left: 10%;
+  .container-index {
+    flex-direction: column; /* Apila el texto arriba y los iconos abajo */
+    align-items: center;
+    margin-left: 0;
+    padding: 20px;
   }
-  .container-play{
-    flex-wrap: wrap;
+
+  .p-index {
+    font-size: 40px; /* Letra más pequeña para móvil */
+    margin-left: 0;
+    text-align: center;
+    margin-top: 5vh;
   }
-  .p-juegos{
-    margin-left: 10%;
+
+  .services {
+    width: 100%;
+    gap: 30px;
+    padding: 20px 0;
   }
+
+  .container-play {
+    flex-direction: column-reverse; /* Pone el texto de los juegos arriba del carrusel */
+    align-items: center;
+  }
+
+  .p-juegos {
+    font-size: 40px;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 5vh;
+    padding: 0 20px;
+  }
+
+  /* Ajustamos el carrusel a un ancho seguro para cualquier celular (300px) */
   .carousel-container-juegos {
-    display: flex; /* Alinea los carruseles horizontalmente */
-    gap: 40px; /* Espaciado entre los carruseles */
-    justify-content: center; /* Centra los carruseles en la pantalla */
-    align-items: center; /* Alinea los carruseles verticalmente */
-    padding: 50px;
-    margin-top: 120px;
-    width: 400px;
+    width: 320px;
+    padding: 20px 0;
+    margin-top: 40px;
   }
   
   .carousel-juegos {
-    width: 100%; /* Ancho de cada carrusel */
-    height: 450px; /* Alto de cada carrusel */
-    overflow: hidden; /* Oculta imágenes fuera del área visible */
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    position: relative;
-    transition: 0.5s ease;
-  }
-  
-  .carousel-images-juegos {
-    display: flex;
-    width: calc(100% * 3); /* Ancho total del conjunto de imágenes (3 imágenes de 400px cada una) */
-    animation: slide 25s infinite; /* Animación continua para pasar por las imágenes */
-    cursor: pointer;
-  }
-  
-  .carousel-juegos:hover {
-    transform: translateY(-20px);
-    transition: 0.5s ease;
-    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.7);
+    width: 300px; 
+    height: 250px; 
   }
   
   .carousel-images-juegos img {
-    width: 400px; /* Cada imagen ocupa el ancho del carrusel */
-    height: 450px; /* Altura de la imagen */
-    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
-    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    width: 300px; 
+    height: 250px; 
   }
   
-  /* Animación de deslizamiento */
+  /* Actualizamos la animación a los nuevos 300px */
   @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-400px); /* Mueve a la 2ª imagen */
-    }
-    50% {
-      transform: translateX(-800px); /* Mueve a la 3ª imagen */
-    }
-    75% {
-      transform: translateX(-400px); /* Vuelve a la 2ª imagen */
-    }
-    100% {
-        transform: translateX(0); /* Vuelve a la 1ª imagen */
-      }
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-300px); }
+    50% { transform: translateX(-600px); }
+    75% { transform: translateX(-300px); }
+    100% { transform: translateX(0); }
   }
 }
 
