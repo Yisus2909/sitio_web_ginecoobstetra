@@ -142,22 +142,23 @@ body{
     text-align: right;
     border-radius: 12px;
     opacity: 0.3 ease;
-    margin-top: -6%;
+    margin-top: -6.8%;
     margin-right: 35px;
 }
 
 .login img{
     width: 110px;
-    height: 50px;
+    height: 50px;    
+    transition: 0.4s;
 }
 
 .login img:hover{
     width: 110px;
-    height: 70px;
-    margin-top: -9px;
+    height: 60px;
+    margin-top: -7px;
     width: 130px;
     transition: 0.4s;
-    margin-right: -4vh;
+    margin-right: -12px;
 }
 
 /* Contenedor principal de las tarjetas */
@@ -751,6 +752,14 @@ input[type="date"] {
   .login img {
     width: 80px;
     height: auto;
+  }
+
+  .login img:hover {
+    width: 80px;
+    height: auto;
+    margin: 0;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
   }
   
   .navbar .nav-links {
